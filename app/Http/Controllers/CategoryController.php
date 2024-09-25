@@ -70,7 +70,7 @@ class CategoryController extends Controller
     {
         $category->update($request->validated());
 
-        return redirect()->route('categories.index', ["page" => $request->page])->with('message', 'The type is updated successfully');
+        return redirect()->route('categories.index', ["page" => $request->page])->with('message', 'The category is updated successfully');
     }
 
     /**
@@ -83,6 +83,6 @@ class CategoryController extends Controller
         $page = request()->query('page');
 
 
-        return redirect()->route('categories.index', ['page' => $page])->with('message', 'The type is deleted successfully');
+        return redirect()->route('categories.index', ['page' => $page])->with('message', 'The category is deleted successfully');
     }
 }
